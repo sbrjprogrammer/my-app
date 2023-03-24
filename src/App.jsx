@@ -1,30 +1,74 @@
-import React,{useState} from 'react';
-import Child from './Child';
-import './App.css';
+import React, {useState } from "react";
+// import Child from "./Child";
+// import RouterCom from "./route/Route";
+// import Todo from "./component/todo";
+import { BrowserRouter,Router,Routes,Route} from "react-router-dom";
 
-function App() {
-  let [count,setCount]=useState(0)
-  let [name,setName]=useState("shahzib")
-     
+import "./App.css";
+import Home from "./Components/Home";
+import { Useeffect } from "./component/useeffect";
+import { Cleanup } from "./component/cleanup";
+import { Useref } from "./component/UseRef";
+import { Apifetch } from "./component/Apifetch";
+import { Filter } from "./component/filterlist/filter";
+import Header from "./Components/Header";
+import AttendancePolicy from "./Components/Attendancetabel/Attendance";
+import Attendance from "./Components/Attendancetabel/attendance2/Attendance";
+// class App extends React.Component{
+//   constructor(){
+//     super()
+//     this.state={
+//       item:"",
+//       todo:[]
+//     }
+//   }
 
-  const updname=()=>{
-    var updatename = prompt("enter value")
-    setName(updatename)
-  }
-  return (
-    /* html or js ko sath me likhana jsx kehlata h */
-  <>
-    <h2>{count}</h2>
-    <button onClick={()=>{setCount(count+1)}}></button>
-  
-    <h2>{name}</h2>
-    <button onClick={()=>{updname()}}></button>
+//   setItem(e){
+//     this.setState({
+//       ...this.state.item,
+//       item:e.target.value,
+//     })
+//   }
+//   addItem(){
+//     this.setState({
+//       ...this.state,
+//       todo:[...this.state.todo, this.state.item]
+//     })
+//   }
+
+//   del(i){
+//    let todo= [...this.state.todo]
+//    todo.splice(i,1)
+//    this.setState({
+//     todo:todo
+//    })
+//   }
 
 
-    <h1>hello</h1>
-    <Child name="shahzaib" age={12} obj={{name : "shahzaib"}}/>
-  </>
-  );
+//   render(){
+//     return(
+//       // <div>
+//       //   <input type="text" name="" id=""  onChange={(e)=>this.setItem(e)} />
+//       //  <button onClick={()=>this.addItem()}> add</button>
+
+//       //  {this.state.todo.map((e,i)=>{
+//       //   return <li>
+//       //     {e}
+//       //     <button onClick={()=>this.del(i)}>cxc</button>
+//       //   </li>
+//       //  })}
+//       // </div>
+//     )
+//   }
+// }
+
+function App(){
+  return(
+    <div>
+      {/* <AttendancePolicy/> */}
+      <Attendance/>
+    </div>
+  )
 }
 
 export default App;

@@ -2,10 +2,12 @@ import React,{useState} from "react";
 
 
 
-function Child({name,age,obj}){
+function Child(){
 
     return(
-        <div><h1>this is {age}</h1> </div>
+     <div>
+         
+     </div>
     )
 }
 

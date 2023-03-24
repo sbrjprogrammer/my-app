@@ -1,0 +1,13 @@
+table{
+    /* font-size: 10px; */
+    border: 1px solid black;
+    overflow-x: auto;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #a39595;
+}
+
+.Table-Container{
+    height: 70vh;
+    width: 70vw;
+}
